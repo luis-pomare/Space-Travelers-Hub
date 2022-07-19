@@ -7,7 +7,7 @@ const missionSlice = createSlice({
   initialState,
   reducers: {
     getMissions(action) {
-      action.payload;
+      return action.payload;
     },
   },
 });
