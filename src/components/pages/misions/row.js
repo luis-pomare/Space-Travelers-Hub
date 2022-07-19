@@ -5,8 +5,8 @@ import { missionJoin } from '../../../redux/mission/missions';
 const Row = (prop) => {
   const dispatch = useDispatch();
   const { name, description, id } = prop;
-  const clickHandler = () => {
-    dispatch(missionJoin());
+  const clickHandler = (id) => {
+    dispatch(missionJoin(id));
   };
 
   return (
@@ -19,7 +19,7 @@ const Row = (prop) => {
           className="join"
           type="button"
           onClick={() => {
-            clickHandler();
+            clickHandler(id);
           }}
         >
           Join Mission

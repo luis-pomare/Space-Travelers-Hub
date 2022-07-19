@@ -9,11 +9,14 @@ const missionSlice = createSlice({
     getMissions(state, action) {
       return action.payload;
     },
-    missionJoin(state) {
-      return state.map((mission) => ({
-        ...mission,
-        joined: !mission.joined,
-      }));
+    missionJoin(state, action) {
+      const id = action.payload;
+      return state.map((mission) => {
+        if (mission.id === id) {
+          return { ...mission, joined: !mission.joined };
+        }
+        return mission;
+      });
     },
   },
 });
