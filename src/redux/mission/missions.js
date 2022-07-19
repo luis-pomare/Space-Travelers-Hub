@@ -9,8 +9,14 @@ const missionSlice = createSlice({
     getMissions(state, action) {
       return action.payload;
     },
+    missionJoin(state) {
+      return state.map((mission) => ({
+        ...mission,
+        joined: true,
+      }));
+    },
   },
 });
 
-export const { getMissions } = missionSlice.actions;
+export const { getMissions, missionJoin } = missionSlice.actions;
 export default missionSlice.reducer;

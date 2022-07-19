@@ -10,7 +10,7 @@ export default function Missions() {
   function addJoin(data) {
     return data.map((mission) => ({
       ...mission,
-      joinned: false,
+      joined: false,
       id: mission.mission_id,
     }));
   }
