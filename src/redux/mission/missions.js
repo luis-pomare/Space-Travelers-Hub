@@ -12,7 +12,7 @@ const missionSlice = createSlice({
     missionJoin(state) {
       return state.map((mission) => ({
         ...mission,
-        joined: true,
+        joined: !mission.joined,
       }));
     },
   },
