@@ -4,25 +4,45 @@ import { missionJoin } from '../../../redux/mission/missions';
 
 const Row = (prop) => {
   const dispatch = useDispatch();
-  const { name, description, id } = prop;
+  const {
+    name, description, id, joined,
+  } = prop;
+
   const clickHandler = (id) => {
     dispatch(missionJoin(id));
   };
+
+  let buttonClass = '';
+  let tdClass = '';
+  let buttonText = '';
+  let tdText = '';
+
+  if (joined) {
+    buttonClass = 'buttonJoined';
+    tdClass = 'tdJoined';
+    buttonText = 'Leave Mission';
+    tdText = 'Active Member';
+  } else {
+    buttonClass = 'buttonUnJoined';
+    tdClass = 'tdUnJoined';
+    buttonText = 'Join Mission';
+    tdText = 'NOT A MEMBER';
+  }
 
   return (
     <tr id={id}>
       <td>{name}</td>
       <td>{description}</td>
-      <td>Not a member</td>
+      <td className={tdClass}>{tdText}</td>
       <td>
         <button
-          className="join"
+          className={buttonClass}
           type="button"
           onClick={() => {
             clickHandler(id);
           }}
         >
-          Join Mission
+          {buttonText}
         </button>
       </td>
     </tr>
