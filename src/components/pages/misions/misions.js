@@ -6,11 +6,15 @@ export default function Missions() {
   const missions = useSelector((state) => state.missions);
   const dispatch = useDispatch();
 
+  function formatData(data) {
+    return data;
+  }
+
   useEffect(() => {
     const call = async () => {
       let response = await fetch('https://api.spacexdata.com/v3/missions');
       response = await response.json();
-      dispatch(getMissions(response));
+      dispatch(getMissions(formatData(response)));
     };
     call();
   }, []);
@@ -31,6 +35,12 @@ export default function Missions() {
             <tr key={mission.id}>
               <td>{mission.mission_name}</td>
               <td>{mission.description}</td>
+              <td>Not a member</td>
+              <td>
+                <button className="join" type="button">
+                  Join Mission
+                </button>
+              </td>
             </tr>
           ))}
         </tbody>
