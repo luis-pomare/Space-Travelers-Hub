@@ -11,6 +11,7 @@ export default function Missions() {
     return data.map((mission) => ({
       ...mission,
       joinned: false,
+      id: mission.mission_id,
     }));
   }
 
