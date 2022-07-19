@@ -1,31 +1,31 @@
 import { createSlice } from '@reduxjs/toolkit';
-// createSlice
+import getRockets from '../../rocket-api';
 
 const initialState = {
-  rockets: [
-    {
-      id: 1,
-      rocket_name: 'rocket1',
-      description: 'lorem1',
-      flickr_images: 'https://imgur.com/DaCfMsj.jpg',
-    },
-    {
-      id: 1,
-      rocket_name: 'rocket1',
-      description: 'lorem1',
-      flickr_images: 'https://imgur.com/DaCfMsj.jpg',
-    },
-  ],
+  rockets: [],
+  status: null,
+  reserved: false,
 };
 
 const rocketsSlice = createSlice({
   name: 'rocket',
   initialState,
-  reducers: {
-    getRockets(state) {
-      return state;
-    },
+  extraReducers: {
+    [getRockets.pending]: (state) => ({
+      ...state,
+      status: 'loading',
+    }),
+    [getRockets.fulfilled]: (state, action) => ({
+      ...state,
+      status: 'success',
+      rockets: action.payload,
+    }),
+    [getRockets.pending]: (state) => ({
+      ...state,
+      status: 'loading',
+    }),
   },
 });
 
+export const getRocket = rocketsSlice.actions;
 export default rocketsSlice;
