@@ -31,7 +31,7 @@ export default function Missions() {
           {missions.map((mission) => (
             <Row
               key={mission.mission_id}
-              id={mission.mission_id + 1}
+              id={mission.mission_id}
               name={mission.mission_name}
               description={mission.description}
             />
