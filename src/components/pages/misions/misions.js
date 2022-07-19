@@ -7,11 +7,18 @@ export default function Missions() {
   const missions = useSelector((state) => state.missions);
   const dispatch = useDispatch();
 
+  function addJoin(data) {
+    return data.map((mission) => ({
+      ...mission,
+      joinned: false,
+    }));
+  }
+
   useEffect(() => {
     const call = async () => {
       let response = await fetch('https://api.spacexdata.com/v3/missions');
       response = await response.json();
-      dispatch(getMissions(response));
+      dispatch(getMissions(addJoin(response)));
     };
     call();
   }, []);
