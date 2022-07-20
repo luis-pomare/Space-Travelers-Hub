@@ -16,12 +16,14 @@ export default function Missions() {
   }
 
   useEffect(() => {
-    const call = async () => {
-      let response = await fetch('https://api.spacexdata.com/v3/missions');
-      response = await response.json();
-      dispatch(getMissions(addJoin(response)));
-    };
-    call();
+    if (missions.length < 3) {
+      const call = async () => {
+        let response = await fetch('https://api.spacexdata.com/v3/missions');
+        response = await response.json();
+        dispatch(getMissions(addJoin(response)));
+      };
+      call();
+    }
   }, []);
 
   return (
