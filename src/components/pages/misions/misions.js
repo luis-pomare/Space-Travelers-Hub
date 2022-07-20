@@ -16,7 +16,7 @@ export default function Missions() {
   }
 
   useEffect(() => {
-    if (missions.length < 3) {
+    if (missions.length === 0) {
       const call = async () => {
         let response = await fetch('https://api.spacexdata.com/v3/missions');
         response = await response.json();

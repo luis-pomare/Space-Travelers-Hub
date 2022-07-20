@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = [{ name: 'apolo' }];
+const initialState = [];
 
 const missionSlice = createSlice({
   name: 'missions',
