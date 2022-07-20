@@ -1,26 +1,21 @@
-import { useSelector, useDispatch } from 'react-redux';
-import { useEffect } from 'react';
-import getRockets from '../../../rocket-api';
+import { useSelector } from 'react-redux';
 import NewRocket from '../../newRocket/newRocket';
 
 export default function Rockets() {
-  const dispatch = useDispatch();
   const { rockets } = useSelector((state) => state.rockets);
-
-  useEffect(() => {
-    dispatch(getRockets());
-  }, []);
+  const rocketList = Object.keys(rockets);
 
   return (
     <section className="list-of-rockets">
       {
-        rockets.length ? rockets.map((rocket) => (
+        rocketList ? rocketList.map((rocket) => (
           <NewRocket
-            key={rocket.id}
-            id={rocket.id}
-            rocketName={rocket.rocketName}
-            description={rocket.description}
-            flickrImages={rocket.flickrImages}
+            key={parseFloat(rocket)}
+            id={parseFloat(rocket)}
+            rocketName={rockets[rocket].rocketName}
+            description={rockets[rocket].description}
+            flickrImages={rockets[rocket].flickrImages}
+            reserved={rockets[rocket].reserved}
           />
         )) : <p>Rockets not found</p>
       }

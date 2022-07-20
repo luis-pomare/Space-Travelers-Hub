@@ -6,6 +6,7 @@ const createRocketList = (obj) => {
     rocketName: rocket.rocket_name,
     description: rocket.description,
     flickrImages: rocket.flickr_images[0],
+    reserved: false,
   }));
   return result;
 };
