@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux';
 import NewRocket from '../../newRocket/newRocket';
+import './rockets.css';
 
 export default function Rockets() {
   const { rockets } = useSelector((state) => state.rockets);

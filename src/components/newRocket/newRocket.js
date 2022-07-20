@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux/es/exports';
 import { reserveRocket } from '../../redux/rocket/rocket';
-import './newRocket.css';
 
 const NewRocket = (props) => {
   const dispatch = useDispatch();
