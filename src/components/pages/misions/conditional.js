@@ -5,8 +5,8 @@ function Joined(props) {
   const { clickHandler, id } = props;
   return (
     <>
+      <td className="tdJoined">Active Member</td>
       <td>
-        <td className="tdJoined">Active Member</td>
         <button
           className="buttonJoined"
           type="button"
@@ -25,8 +25,8 @@ function Unjoined(props) {
   const { clickHandler, id } = props;
   return (
     <>
+      <td className="tdUnJoined">NOT A MEMBER</td>
       <td>
-        <td className="tdUnJoined">NOT A MEMBER</td>
         <button
           className="buttonUnJoined"
           type="button"
@@ -51,17 +51,17 @@ export default function Conditional(props) {
 }
 
 Joined.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   clickHandler: PropTypes.func.isRequired,
 };
 
 Unjoined.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   clickHandler: PropTypes.func.isRequired,
 };
 
 Conditional.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   clickHandler: PropTypes.func.isRequired,
   joined: PropTypes.bool.isRequired,
 };
