@@ -19,8 +19,6 @@ export default function MyProfile() {
     });
   }
 
-  console.log(rocketReserved);
-
   return (
     <main id="profileContainer">
       <ul className="list-group">
