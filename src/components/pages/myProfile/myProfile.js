@@ -1,7 +1,12 @@
 import React from 'react';
+import MyRockets from './miRockets';
+import MyMissions from './myMissions';
 
 export default function MyProfile() {
   return (
-    <h1>Hello fd!</h1>
+    <main id="profileContainer">
+      <MyMissions />
+      <MyRockets />
+    </main>
   );
 }
