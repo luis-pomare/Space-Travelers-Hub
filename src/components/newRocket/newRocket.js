@@ -1,4 +1,3 @@
-// import { useDispatch } from 'react-redux/es/exports';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux/es/exports';
 import { reserveRocket } from '../../redux/rocket/rocket';
