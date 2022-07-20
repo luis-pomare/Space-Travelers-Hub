@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getMissions } from '../../../redux/mission/missions';
 import Row from './row';
+import './missions.css';
 
 export default function Missions() {
   const missions = useSelector((state) => state.missions);
@@ -31,9 +32,9 @@ export default function Missions() {
       <table>
         <thead>
           <tr>
-            <th>Mission</th>
-            <th>Description</th>
-            <th>Status</th>
+            <th className="tableTittle">Mission</th>
+            <th className="tableTittle">Description</th>
+            <th className="tableTittle">Status</th>
             <th> </th>
           </tr>
         </thead>
