@@ -7,13 +7,23 @@ export default function Missions() {
   const missions = useSelector((state) => state.missions);
   const dispatch = useDispatch();
 
+  function addJoin(data) {
+    return data.map((mission) => ({
+      ...mission,
+      joined: false,
+      id: mission.mission_id,
+    }));
+  }
+
   useEffect(() => {
-    const call = async () => {
-      let response = await fetch('https://api.spacexdata.com/v3/missions');
-      response = await response.json();
-      dispatch(getMissions(response));
-    };
-    call();
+    if (missions.length < 3) {
+      const call = async () => {
+        let response = await fetch('https://api.spacexdata.com/v3/missions');
+        response = await response.json();
+        dispatch(getMissions(addJoin(response)));
+      };
+      call();
+    }
   }, []);
 
   return (
@@ -34,6 +44,7 @@ export default function Missions() {
               id={mission.mission_id}
               name={mission.mission_name}
               description={mission.description}
+              joined={mission.joined}
             />
           ))}
         </tbody>
