@@ -1,12 +1,34 @@
 import React from 'react';
-import MyRockets from './miRockets';
+import { useSelector } from 'react-redux';
 import MyMissions from './myMissions';
 
 export default function MyProfile() {
+  const { rockets } = useSelector((state) => state.rockets);
+  const rocketList = Object.keys(rockets);
+
+  const rocketReserved = [];
+
+  if (rocketList.length) {
+    rocketList.forEach((item) => {
+      if (rockets[item].reserved) {
+        rocketReserved.push({
+          id: rocketReserved.length + 1,
+          rocketName: rockets[item].rocketName,
+        });
+      }
+    });
+  }
+
   return (
     <main id="profileContainer">
+      <ul className="list-group">
+        {
+          rocketReserved.length ? rocketReserved.map((item) => (
+            <li key={item.id}>{item.rocketName}</li>
+          )) : <li>No Rockets Selected</li>
+        }
+      </ul>
       <MyMissions />
-      <MyRockets />
     </main>
   );
 }
