@@ -20,7 +20,8 @@ export default function MyProfile() {
   }
 
   return (
-    <main id="profileContainer">
+    <section className="profileContainer">
+      <h2 className="myMissionsTitle">My Rockets</h2>
       <ul className="list-group">
         {
           rocketReserved.length ? rocketReserved.map((item) => (
@@ -29,6 +30,6 @@ export default function MyProfile() {
         }
       </ul>
       <MyMissions />
-    </main>
+    </section>
   );
 }
