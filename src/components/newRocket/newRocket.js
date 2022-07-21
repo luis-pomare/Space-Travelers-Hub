@@ -17,13 +17,27 @@ const NewRocket = (props) => {
           <h2>{rocketName}</h2>
           <span><b>{reserved ? 'Reserved' : ''}</b></span>
           <h4>{description}</h4>
-          <button
-            type="button"
-            className="reserve-button"
-            onClick={() => dispatch(reserveRocket(id))}
-          >
-            {reserved ? <b>Cancel Reserve</b> : 'Reserved Rocket'}
-          </button>
+          {reserved
+            ? (
+              <button
+                type="button"
+                className="reserve-button"
+                onClick={() => dispatch(reserveRocket(id))}
+              >
+                Cancel Reserve
+                {' '}
+              </button>
+            )
+            : (
+              <button
+                type="button"
+                className="reserve-button"
+                onClick={() => dispatch(reserveRocket(id))}
+              >
+                Reserve Rocket
+                {' '}
+              </button>
+            )}
         </div>
       </section>
     </article>
