@@ -20,9 +20,9 @@ export default function MyProfile() {
   }
 
   return (
-    <section className='profileContainer'>
-      <h2 className='myMissionsTitle'>My Rockets</h2>
-      <ul className='list-group'>
+    <section className="profileContainer">
+      <h2 className="myMissionsTitle">My Rockets</h2>
+      <ul className="list-group">
         {rocketReserved.length ? (
           rocketReserved.map((item) => <li key={item.id}>{item.rocketName}</li>)
         ) : (
