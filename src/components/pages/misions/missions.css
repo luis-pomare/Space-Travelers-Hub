@@ -4,7 +4,7 @@ main {
 }
 
 .tableTittle {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 600;
   text-align: left;
 }
@@ -23,8 +23,8 @@ th {
   border: 1px solid #ddd;
 }
 
-.reserve-button {
-  width: 11.5rem;
+button {
+  width: 7.5rem;
   height: 2.063rem;
   border-radius: 3px;
   border: none;
@@ -34,4 +34,13 @@ th {
   letter-spacing: 0.5px;
   font-weight: 300;
   color: rgb(255, 255, 255);
+}
+
+.column1 {
+  width: 120px;
+}
+
+.column2,
+.column3 {
+  font-size: 15px;
 }

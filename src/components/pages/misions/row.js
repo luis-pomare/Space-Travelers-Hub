@@ -15,8 +15,8 @@ const Row = (prop) => {
 
   return (
     <tr id={id}>
-      <td className="tableTittle">{name}</td>
-      <td>{description}</td>
+      <td className="tableTittle column1">{name}</td>
+      <td className="column2">{description}</td>
       <Conditional clickHandler={clickHandler} id={id} joined={joined} />
     </tr>
   );
