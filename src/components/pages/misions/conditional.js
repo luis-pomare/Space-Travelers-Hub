@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './style/conditional.css';
 
 function Joined(props) {
   const { clickHandler, id } = props;

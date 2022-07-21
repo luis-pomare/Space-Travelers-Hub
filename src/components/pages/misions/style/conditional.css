@@ -1,0 +1,14 @@
+/* Conditional State */
+
+.buttonUnJoined {
+  width: 7.5rem;
+  height: 2.063rem;
+  border-radius: 3px;
+  border: none;
+  background-color: #0290ff;
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 0.813rem;
+  letter-spacing: 0.5px;
+  font-weight: 300;
+  color: rgb(255, 255, 255);
+}
