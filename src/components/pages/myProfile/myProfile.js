@@ -21,14 +21,19 @@ export default function MyProfile() {
 
   return (
     <main id="profileContainer">
-      <ul className="list-group">
-        {
-          rocketReserved.length ? rocketReserved.map((item) => (
-            <li key={item.id}>{item.rocketName}</li>
-          )) : <li>No Rockets Selected</li>
-        }
-      </ul>
       <MyMissions />
+      <section>
+        <h2>My Rockets</h2>
+        <ul className="list-group">
+          {rocketReserved.length ? (
+            rocketReserved.map((item) => (
+              <li key={item.id}>{item.rocketName}</li>
+            ))
+          ) : (
+            <li>No Rockets Selected</li>
+          )}
+        </ul>
+      </section>
     </main>
   );
 }
