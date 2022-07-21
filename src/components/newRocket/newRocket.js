@@ -15,16 +15,16 @@ const NewRocket = (props) => {
         <img className="images" alt="this is a rocket" src={flickrImages} />
         <div className="rocket-description">
           <h2>{rocketName}</h2>
-          <span><b>{reserved ? 'Reserved' : ''}</b></span>
+          {reserved ? <span className="reserved-description"><b>Reserved</b></span> : ''}
           <h4>{description}</h4>
           {reserved
             ? (
               <button
                 type="button"
-                className="reserve-button"
+                className="cancel-reserve"
                 onClick={() => dispatch(reserveRocket(id))}
               >
-                Cancel Reserve
+                Cancel Reservation
                 {' '}
               </button>
             )
