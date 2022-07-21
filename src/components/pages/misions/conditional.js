@@ -6,7 +6,9 @@ function Joined(props) {
   const { clickHandler, id } = props;
   return (
     <>
-      <td className="tdJoined colum3">Active Member</td>
+      <td className="colum3">
+        <b className="tdJoined">Active Member</b>
+      </td>
       <td className="column4">
         <button
           className="buttonJoined"
@@ -26,7 +28,9 @@ function Unjoined(props) {
   const { clickHandler, id } = props;
   return (
     <>
-      <td className="tdUnJoined column3">NOT A MEMBER</td>
+      <td className="column3">
+        <b className="tdUnJoined">NOT A MEMBER</b>
+      </td>
       <td className="column4">
         <button
           className="buttonUnJoined"
