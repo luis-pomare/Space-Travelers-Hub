@@ -1,15 +1,8 @@
 .profileContainer {
-  margin: 15px 7% 0 7%;
-  display: grid;
-  grid-template-rows: auto auto;
-  grid-template-columns: auto auto;
-  column-gap: 20px;
-}
-
-section section {
-  grid-column-start: 2;
-  grid-row-start: 1;
-  grid-row-end: 3;
+  margin: 15px 7% 100px 7%;
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
 }
 
 section ul {
@@ -19,6 +12,7 @@ section ul {
 section li {
   border: 1px solid #ccc;
   padding: 8px 0 12px 8px;
+  width: 40vw;
 }
 
 h2 {
