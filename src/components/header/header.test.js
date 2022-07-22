@@ -6,8 +6,10 @@ import '@testing-library/jest-dom';
 import Header from './header';
 
 test('header displayed', () => {
-  render(<BrowserRouter>
-    <Header />
-  </BrowserRouter>);
+  render(
+    <BrowserRouter>
+      <Header />
+    </BrowserRouter>,
+  );
   expect(document.querySelector('header')).toBeInTheDocument();
 });
