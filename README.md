@@ -1,70 +1,111 @@
-# Getting Started with Create React App
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Space Travelers' Hub
 
-## Available Scripts
+## "Space Travelers' Hub" is a website for who's want to travell to the space. It is a Single Page App (SPA)
 
-In the project directory, you can run:
+***In this group project we lay foundations for Space Travelers' Hub website. We create the React part of the app. We also set up routing using React Router.***
 
-### `npm start`
+### This project was created using CREATE REACT APP (CRA).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### This group project was made in 4 days, we worked in pair-programming in specific task for each member of this group.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- We used a kanban board to asign the task for each member.
 
-### `npm test`
+- *We create 3 pages:*
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Rockets: were the user can reserve a rocket or cancel it.
 
-### `npm run build`
+- Missions: were the user can join to a mission or unjoint to it.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- My Profile: were the user can see the rockets and missions wich he applied.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**We add test for components and reducers also.**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+***This are screenshoots from the page***
 
-### `npm run eject`
+![image](https://user-images.githubusercontent.com/93630700/180476993-0f1023a0-67cd-45ae-88b9-c811d575540c.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![image](https://user-images.githubusercontent.com/93630700/180477158-3adee2a1-b239-4ce2-8155-3fd0f3e5c899.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![image](https://user-images.githubusercontent.com/93630700/180477430-70dc1bc4-d44e-47ff-ac33-551bfe03133b.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Live Demo
 
-## Learn More
+[Netlify]() -- Avaible Soon
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Build With
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- CRA (Create React App)
 
-### Code Splitting
+### Technologies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- HTML
+- CSS
+- JS ES6
+- React
+- Redux Toolkits
+- Jest
+- Redux Testing Library
+- Babel
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Getting Started
 
-### Making a Progressive Web App
+- Press in the right top corner message "code" to clone the project.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Prerequisites
 
-### Advanced Configuration
+- You need to have a code editor to be able to run the code. VSCode is most preferred.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Setup
 
-### Deployment
+- Select the method that you want to use for clone.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Install
 
-### `npm run build` fails to minify
+- Run it in your code editor
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Usage
+
+- To install this project, you can run the following command: `npm install`
+- Then to run the server, `npm start`
+
+## Authors
+
+👤 **@BregornOriginal**
+
+- GitHub: [@BregornOriginal](https://github.com/@BregornOriginal)
+
+- Twitter: [@Bregorn](https://twitter.com/Bregorn)
+
+- LinkedIn: [@Julio Miguel Gagliardi](https://www.linkedin.com/in/julio-gagliardi/)
+
+👤 Luis pomare
+
+- GitHub: [@Luis Pomare](https://github.com/luis-pomare)
+
+- Twitter: [@LuisPomare1](https://twitter.com/LuisPomare1)
+
+- LinkedIn: [@Luis Pomare](https://www.linkedin.com/in/luis-pomare-388116225/)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
+
+## 📝 License
+
+This project is MIT licensed.
