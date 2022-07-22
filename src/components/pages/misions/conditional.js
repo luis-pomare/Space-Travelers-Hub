@@ -1,12 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './style/conditional.css';
 
 function Joined(props) {
   const { clickHandler, id } = props;
   return (
     <>
-      <td>
-        <td className="tdJoined">Active Member</td>
+      <td className="colum3">
+        <b className="tdJoined">Active Member</b>
+      </td>
+      <td className="column4">
         <button
           className="buttonJoined"
           type="button"
@@ -25,8 +28,10 @@ function Unjoined(props) {
   const { clickHandler, id } = props;
   return (
     <>
-      <td>
-        <td className="tdUnJoined">NOT A MEMBER</td>
+      <td className="column3">
+        <b className="tdUnJoined">NOT A MEMBER</b>
+      </td>
+      <td className="column4">
         <button
           className="buttonUnJoined"
           type="button"
@@ -51,17 +56,17 @@ export default function Conditional(props) {
 }
 
 Joined.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   clickHandler: PropTypes.func.isRequired,
 };
 
 Unjoined.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   clickHandler: PropTypes.func.isRequired,
 };
 
 Conditional.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   clickHandler: PropTypes.func.isRequired,
   joined: PropTypes.bool.isRequired,
 };

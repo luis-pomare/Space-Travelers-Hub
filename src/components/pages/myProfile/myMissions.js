@@ -8,15 +8,15 @@ export default function MyMissions() {
   return (
     <section>
       <h2 id="myMissionsTitle">My Missions</h2>
-      <span id="myMissionsContainer">
+      <ul id="myMissionsContainer">
         {selectedMissions.length > 0 ? (
           selectedMissions.map((item) => (
-            <p key={item.id}>{item.mission_name}</p>
+            <li key={item.id}>{item.mission_name}</li>
           ))
         ) : (
-          <p>Not missions joined yet</p>
+          <li>Not missions joined yet</li>
         )}
-      </span>
+      </ul>
     </section>
   );
 }

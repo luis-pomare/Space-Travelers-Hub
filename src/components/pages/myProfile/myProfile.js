@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import MyMissions from './myMissions';
+import './myProfile.css';
 
 export default function MyProfile() {
   const { rockets } = useSelector((state) => state.rockets);
@@ -21,15 +22,19 @@ export default function MyProfile() {
 
   return (
     <section className="profileContainer">
-      <h2 className="myMissionsTitle">My Rockets</h2>
-      <ul className="list-group">
-        {
-          rocketReserved.length ? rocketReserved.map((item) => (
-            <li key={item.id}>{item.rocketName}</li>
-          )) : <li>No Rockets Selected</li>
-        }
-      </ul>
       <MyMissions />
+      <section>
+        <h2 className="myMissionsTitle">My Rockets</h2>
+        <ul className="list-group">
+          {rocketReserved.length ? (
+            rocketReserved.map((item) => (
+              <li key={item.id}>{item.rocketName}</li>
+            ))
+          ) : (
+            <li>No Rockets Selected</li>
+          )}
+        </ul>
+      </section>
     </section>
   );
 }
