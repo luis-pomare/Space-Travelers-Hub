@@ -1,0 +1,30 @@
+.profileContainer {
+  margin: 15px 7% 0 7%;
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: auto auto;
+  column-gap: 20px;
+}
+
+section section {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+section ul {
+  padding-left: 0;
+}
+
+section li {
+  border: 1px solid #ccc;
+  padding: 8px 0 12px 8px;
+}
+
+h2 {
+  height: 23px;
+}
+
+.list-group {
+  align-items: flex-start;
+}

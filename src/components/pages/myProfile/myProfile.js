@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import MyMissions from './myMissions';
+import './myProfile.css';
 
 export default function MyProfile() {
   const { rockets } = useSelector((state) => state.rockets);
