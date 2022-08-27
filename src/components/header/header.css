@@ -16,15 +16,7 @@ a {
 
 header {
   display: flex;
-  justify-content: space-between;
-  margin: 30px 50px 40px 50px;
-  align-items: center;
-}
-
-h1 {
-  font-size: 40px;
-  font-family: Montserrat, sans-serif;
-  margin-left: 40px;
+  flex-direction: column;
 }
 
 .container-logo {
@@ -67,4 +59,19 @@ h1 {
   width: 90%;
   border-radius: 10px;
   background: #dcdcdc;
+}
+
+@media screen and (min-width: 1000px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 30px 50px 40px 50px;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 40px;
+    font-family: Montserrat, sans-serif;
+    margin-left: 40px;
+  }
 }
