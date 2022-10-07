@@ -22,3 +22,13 @@ h2 {
 .list-group {
   align-items: flex-start;
 }
+
+@media screen and (max-width: 1000px) {
+  .profileContainer {
+    flex-direction: column;
+  }
+
+  section li {
+    width: 80vw;
+  }
+}
